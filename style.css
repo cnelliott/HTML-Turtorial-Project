@@ -17,8 +17,7 @@ nav {
 }
 
 header {
-  background-color: #eadcff;
-  height: calc(100vh - 70px);
+  background-color: #eadcff;  
   padding: 24px;
   display: flex;
   align-items: center;
@@ -64,7 +63,7 @@ li {
 .row {
   width: 100%;
   max-width: 1300px;
-  marigin: 0 auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,7 +71,7 @@ li {
 
 #about,
 #discord,
-#contract, 
+#contact, 
 footer {
   padding: 40px 0;
   
@@ -107,8 +106,8 @@ img {
   width: 100%;
 }
 
-.section__description--wrapper {
-  width: 60%;
+.about__img--wrapper,
+.section__description--wrapper {    
   padding: 0 24px;
 }
 
@@ -141,6 +140,7 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 input, textarea {
@@ -158,6 +158,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 48px 24px;
 }
 
 .footer__logo {
@@ -171,4 +172,65 @@ footer {
 
 .footer__link {
   padding: 0 16px;
+}
+
+/* SMALL PHONES, TABLETS, LARGE SMART PHONES */
+@media (max-width: 728px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .home__description {
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .home__description--button {
+      max-width: 240px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 60px;
+    }
+
+    .subheader {
+      text-align: center;
+      font-size: 28px;
+    }
+
+    ul {
+      display: none;
+    }
+
+    .section__description {
+      flex-direction: column;
+    }
+
+    .section__description--wrapper {
+      width: 100%;
+    }
+
+    .about__img--wrapper {
+      width: 100%;
+    }
+
+    #discord .section__description {
+      flex-direction: column-reverse;
+    }
+
+    .footer__logo {
+      max-width: 360px;
+
+      .footer__link {
+        padding: 0 4px;
+        font-size: 18px;
+      }
+    }
+
+    .footer__links {
+      margin-bottom: 24px;
+    }
 }
